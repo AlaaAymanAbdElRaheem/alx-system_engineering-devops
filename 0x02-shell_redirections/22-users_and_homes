@@ -1,2 +1,2 @@
 #!/bin/bash
-https://phoenixnap.com/kb/linux-cut
+cut -d ':' -f 1,6 /etc/passwd | sort
