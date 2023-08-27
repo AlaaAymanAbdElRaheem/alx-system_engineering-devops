@@ -1,0 +1,21 @@
+whiteboard link:
+https://i.imgur.com/HH7RRh6.png
+
+Algorthim:
+The load balancer is configured with a round-robin algorithm, which evenly distributes incoming requests among the available servers, allowing each server to take turns handling requests.
+
+Load Balancer - Active-Active vs. Active-Passive:
+The load balancer is set up in an active-active configuration, where both servers are active and share the incoming requests. In contrast, an active-passive setup would involve a standby server that becomes active only if the primary server fails..
+
+How a database Primary-Replica (Master-Slave) cluster works and the difference between the primary node and the replica one:
+In a Primary-Replica cluster, the primary node (master) handles read and write operations, while the replica nodes (slaves) replicate the data from the primary node. Replication ensures data redundancy and allows for failover in case the primary node becomes unavailable.
+
+Single Point of Failure (SPOF):
+The infrastructure has single points of failure, as there is only one web server, one application server, and one database server. If any of these servers fail, it can result in downtime or service disruption.
+
+Security issues:
+Lack of a firewall exposes the servers to potential security threats and unauthorized access.
+The absence of HTTPS encryption leaves data transmitted between clients and the servers vulnerable to interception.
+
+No Monitoring:
+Without monitoring tools or processes in place, it becomes challenging to track server performance, or detect and resolve issues proactively.

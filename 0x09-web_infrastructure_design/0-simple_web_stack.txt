@@ -1,0 +1,31 @@
+https://imgur.com/GzcDVlY
+
+What is a server
+    A server is a computer that provides a service to another computer
+What is the role of the domain name
+    The domain name is the name of the website which is used to access the server
+What type of DNS record www is in www.foobar.com
+    The www is a subdomain of foobar.com
+What is the role of the web server
+    explained in the image
+What is the role of the application server
+    explained in the image
+What is the role of the database
+    explained in the image
+What is the server using to communicate with the computer of the user requesting the website
+    HTTP protocol
+
+
+explain what the issues are with this infrastructure:
+1- SPOF
+    SPOF are bound to happen because this infrastructure has only one server and 
+    one application server and one of every mandatory component and if any of them
+    goes down the website will go down with it
+
+2- Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+    Whenever we need to update of do maintenance on any of the components the website
+    will go down becuase there is no other component to take over the one that is down
+
+3- Cannot scale if too much incoming traffic
+    If the website gets too much traffic the server will not be able to handle it
+    and the website will go down
