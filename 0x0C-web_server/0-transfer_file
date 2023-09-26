@@ -12,4 +12,4 @@ ip="$2"
 username="$3"
 ssh_key="$4"
 
-scp -i "$ssh_key" -o StrictHostKeyChecking=no "$file_path" "$username@$ip"
+scp -i "$ssh_key" -o StrictHostKeyChecking=no "$file_path" "$username@$ip:~/"
