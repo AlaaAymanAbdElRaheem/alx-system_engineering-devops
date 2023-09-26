@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Install nginx
+#Nginx listening on port 80
+#using curl and GET requests
+
+sudo apt update
+sudo apt install -y nginx
+echo "Hello World!" > /var/www/html/index.html
+curl -s http://localhost/
+sudo nginx -s reload
