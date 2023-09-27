@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#debugging project
+docker exec -it 95001062edc9 /bin/bash
+service apache2 start
