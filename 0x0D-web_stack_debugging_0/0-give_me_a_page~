@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#debugging project
-service apache2 start
