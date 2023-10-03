@@ -16,6 +16,6 @@ backend servers
    mode http
    server 382366-web-01 54.175.75.247:80
    server 382366-web-02 18.210.14.159:80
-" | sudo tee /etc/haproxy/haproxy.cfg
+" | sudo tee /etc/haproxy/haproxy.cfg >/dev/null
 
 sudo service haproxy restart
