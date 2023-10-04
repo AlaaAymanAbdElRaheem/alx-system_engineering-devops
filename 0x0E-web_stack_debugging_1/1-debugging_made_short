@@ -2,4 +2,4 @@
 #fix short and sweet.
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 sudo service nginx restart
-pkill -1 nginx
+pkill nginx
