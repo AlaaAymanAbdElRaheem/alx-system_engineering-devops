@@ -7,3 +7,5 @@ sudo apt-get install nginx
 sudo service nginx status
 sudo service nginx start
 sudo ufw allow 80
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo service nginx restart
