@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #Nginx likes port 80
 
-docker exec -ti 4c848899e6ddcfed1876cf9bd8925e647dd25a26dc5ac0ca168920f59bb8ba11 /bin/bash
 sudo apt-get update
 sudo apt-get install -y curl
 sudo apt-get install nginx
