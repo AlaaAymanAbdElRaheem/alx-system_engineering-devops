@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #fix short and sweet.
-
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-sudo /etc/init.d/nginx stop
+service nginx restart
+pkill --oldest nginx
