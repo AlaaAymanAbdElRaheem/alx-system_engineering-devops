@@ -2,7 +2,7 @@
 #Fixing container so that Nginx is running as the nginx user and  all active IPs on port 8080
 
 sudo service nginx stop
-sed -i 's/# user www-data;/\nuser nginx;/g' /etc/nginx/nginx.conf
+sudo echo "user nginx;" >>  /etc/nginx/nginx.conf
 sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' /etc/nginx/sites-available/default
 sed -i 's/listen \[::\]:80 default_server ipv6only=on;/listen \[::\]:8080 default_server ipv6only=on;/g' /etc/nginx/sites-available/default
 chown nginx:nginx /etc/nginx/nginx.conf
