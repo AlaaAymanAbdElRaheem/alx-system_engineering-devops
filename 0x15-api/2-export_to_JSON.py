@@ -14,12 +14,12 @@ if __name__ == "__main__":
     tasks = task_response.json()
     user_response = requests.get(url + "users/{}".format(user_id))
     user = user_response.json()
-    user_name = user["username"]
+    user_name = user.get("username")
     tasks_list = []
 
     for task in tasks:
-        tasks_list.append({"task": task["title"],
-                           "completed": task["completed"],
+        tasks_list.append({"task": task.get("title"),
+                           "completed": task.get("completed"),
                            "username": user_name})
     json_dict = {user_id: tasks_list}
 
