@@ -2,9 +2,9 @@
 """script that, using this REST API, for a given employee ID,
 returns information about his/her TODO list progress."""
 
+import json
 import requests
 import sys
-import json
 
 
 if __name__ == "__main__":
@@ -15,7 +15,6 @@ if __name__ == "__main__":
     user_response = requests.get(url + "users/{}".format(user_id))
     user = user_response.json()
     user_name = user["username"]
-    file_name = "{}.csv".format(user_id)
     tasks_list = []
 
     for task in tasks:
