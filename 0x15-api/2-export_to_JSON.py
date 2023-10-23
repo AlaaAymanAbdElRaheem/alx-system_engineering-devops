@@ -21,7 +21,7 @@ if __name__ == "__main__":
         tasks_list.append({"task": task.get("title"),
                            "completed": task.get("completed"),
                            "username": user_name})
-    json_dict = "{}".format(user_id, tasks_list)
+     son_dict = {"{}".format(user_id): tasks_list}
 
     file_name = "{}.json".format(user_id)
     with open(file_name, mode='w') as json_file:
