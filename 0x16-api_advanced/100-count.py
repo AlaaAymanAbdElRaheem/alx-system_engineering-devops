@@ -5,6 +5,7 @@ and prints a sorted count of given keywords
 (case-insensitive, delimited by spaces.
 Javascript should count as javascript, but java should not)."""
 
+import re
 import requests
 
 
@@ -15,8 +16,9 @@ def count_words(subreddit, word_list, after=None, word_dict={}):
     response = requests.get(url, headers=headers, params=params)
     if response.status_code == 200:
         for i in response.json().get("data").get("children"):
+            title = i.get("data").get("title").lower()
             for word in word_list:
-                if word.lower() in i.get("data").get("title").lower():
+                if re.search(r'\b{}\b'.format(word.lower()), title):
                     if word.lower() not in word_dict:
                         word_dict[word.lower()] = 1
                     else:
